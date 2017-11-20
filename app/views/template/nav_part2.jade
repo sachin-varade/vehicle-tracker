@@ -1,0 +1,28 @@
+#logo
+	i.icon.ion-ios-infinite-outline
+	span  Vehicle Manager
+
+#linkWraps
+	// there is JS code that will show the corresponding panel to the clicked navigation div.
+	// ie: clicking <div class="nav">HOME</div> will show panel #homePanel
+	// this code is in layout.jade
+	//.nav#homeLink HOME
+	//- .nav#newPartLink(style="font-weight: 300;")  NEW PART
+	//- .nav#updatePartLink(style="font-weight: 300;")  UPDATE PART
+	//- .nav#dashboardLink(style="font-weight: 300;") DASHBOARD
+	
+#whoAmI
+	span.fa.fa-user#userIcon
+	span#userField(style="font-weight: 300;") LOGIN
+	span &nbsp;
+	span.fa.fa-angle-down
+	
+	#userSelect
+		.userLine(name="#{bag.setup.USER1}")
+			span #{bag.setup.USER1.toUpperCase()} &nbsp;&nbsp;
+		.userLine(name="#{bag.setup.USER2}")
+			span #{bag.setup.USER2.toUpperCase()}&nbsp;&nbsp;
+			
+			
+form#loginWrap
+	a(href="/logout" style="font-weight: 300;" ) Logout

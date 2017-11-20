@@ -1,0 +1,33 @@
+#newPartPanel(hidden).panel
+	h1 Enter Part Details
+	hr
+
+	#innerWrap
+		
+		form(action="/newPart" method="POST")#newPartform
+			table#createPartTable(style="width:50%;float:left")
+				tr
+					td
+						h5 Part Id:
+					td
+						legend 
+							input(type="text" name="PartId" placeholder="Part Id")
+				tr
+					td
+						h5 Product Code:
+					td
+						legend 
+							input(type="text" name="ProductCode" placeholder="Product Code")
+				tr
+					td
+						h5 Date Of Manufacture:
+					td
+						legend 	
+							input(type="date" name="DateOfManufacture" placeholder="Date of Manufacture")
+				tr
+					td#createPartBut(colspan="2" style="font-size: 12px;")
+						legend
+							button(type="button" style="margin:10px 10px 5px 10px" )#submit
+								span.fa.fa-plus &nbsp;&nbsp;
+								span SUBMIT
+				

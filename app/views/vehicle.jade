@@ -1,0 +1,38 @@
+extends ./template/layout.jade
+	
+	
+// --------------- Header -------------- //
+block custom_header
+	script(src='/js/vehicle.js')
+	script(src='/js/blockchain.js')
+	script(type='text/javascript').
+		$(document).ready(function(){
+			$("#contentTable").css("height",$("#dashboardTable").height() + 125);	
+		});
+		
+// --------------- Navigation Bar  -------------- //
+block navpanel
+	include ./template/navigation.jade
+	
+	
+// --------------- Main Stuff  -------------- //
+block content
+	#contentPanel
+		
+		#blockdate(title="date of last block") loading...		
+		
+		// --------------- New Batch Panel
+		include ./panel_createVehicle.jade
+		
+		// --------------- Batch Tag Panel
+		include ./panel_batchTag.jade
+		
+		// --------------- Dashboard View
+		include ./panel_vehicleDashboard.jade
+		
+		// --------------- updatePart View
+		include ./panel_updatePart.jade
+
+		
+block footer
+	include ./template/blockchain.jade

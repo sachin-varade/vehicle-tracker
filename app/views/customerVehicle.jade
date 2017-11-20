@@ -1,0 +1,37 @@
+extends ./template/layout.jade
+	
+	
+// --------------- Header -------------- //
+block custom_header
+	script(src='/js/vehicle.js')
+	script(src='/js/blockchain.js')
+	script(type='text/javascript').
+		$(document).ready(function(){
+			$("#contentTable").css("height",$("#dashboardTable").height() + 125);	
+		});
+		
+		
+// --------------- Navigation Bar  -------------- //
+block navpanel
+	include ./template/navigation.jade
+	
+	
+// --------------- Main Stuff  -------------- //
+block content
+	#contentPanel
+		
+		#blockdate(title="date of last block") loading...
+		
+		#innerButtons(style="text-align:right;color:#333")
+			p#vehicleList(style="cursor:pointer;display:none;") Vehicle List
+		
+		table#customerVehicleDetailsTable.tablesorter(style="width:100%;float:left;")
+				//- thead
+				//- 	tr 
+				//- 		th#vehicleDetHeader(colspan="2" style="font-size: 18px;text-align: left;font-weight: bold;") Customer Vehicle Details
+				tbody#vehicleDetailsBody
+					// --------------- Dashboard View
+					include ./panel_customerVehicleDetails.jade
+
+block footer
+	include ./template/blockchain.jade

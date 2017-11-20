@@ -1,0 +1,17 @@
+{
+	"network":{
+		"peers": "",
+		"users": "",
+		"options": {
+			"quiet": true,
+			"timeout": 60000,
+			"maxRetry": 5
+		}
+	},
+	"chaincode":{
+		"zip_url": "https://github.com/nirmal1988/BlockChainSamples/archive/master.zip",
+		"unzip_dir": "BlockChainSamples-master/Vehicle/chainCode",
+		"git_url": "https://github.com/nirmal1988/BlockChainSamples",
+		"deployed_name" : "cebec655e1e8ec6abe4b5a19f14f0070c75fa6a23cfb3fd14d2d20c0bb35d3e57d52277c13f183f12d09e134dfeb6fa15644661757cb9190f1926c6079ebf693"
+	}
+}

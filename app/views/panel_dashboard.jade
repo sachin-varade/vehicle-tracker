@@ -1,0 +1,38 @@
+#dashboardPanel(hidden).panel
+	h1 Part Tracker
+	hr
+
+	#dashboardModal.modalDialog(style="margin-top: 200px")
+			div
+				.modal-header
+					h5 Filter Parts
+					hr
+				.modal-content
+					form#dashboardFilter
+						input#dashboard_partId.dashboard-filter(type="text" name="partId" placeholder="Part Id")
+						br
+						br
+						a.filter-button(href="#close" title="Close" ) Close
+						
+	div#contentTable					
+		div(style="text-align:center")
+			span#spinner2.fa.fa-circle-o-notch.fa-spin(style="font-size: 80px;color:#5596E6")					
+		#openTrades1
+
+			br
+			a.filter-button(href="#dashboardModal") Filter Parts
+			br
+			br
+			table#dashboardTable.tablesorter(style="width:30%;float:left")
+				thead
+					tr 
+						th PART ID
+				tbody#dashboardBody
+				tr
+					td
+
+			table#batchDetailsTable.tablesorter(style="width:64%;float:right")
+				thead
+					tr 
+						th#bDetHeader(colspan="2" style="font-size: 12px;")
+				tbody#batchDetailsBody

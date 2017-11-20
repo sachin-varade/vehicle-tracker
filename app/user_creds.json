@@ -1,0 +1,32 @@
+[
+	{"username":"MERCEDES","displayname":"MERCEDES","password":"passw0rd","role":"MANUFACTURER"},
+	{"username":"BMW","displayname":"BMW","password":"passw0rd","role":"MANUFACTURER"},
+	{"username":"Mini","displayname":"Mini","password":"passw0rd","role":"MANUFACTURER"},
+	{"username":"Rolls-Royce","displayname":"Rolls Royce","password":"passw0rd","role":"MANUFACTURER"},
+	{"username":"Zinoro","displayname":"Zinoro","password":"passw0rd","role":"MANUFACTURER"},
+	{"username":"MFR","displayname":"MFR","password":"passw0rd","role":"MANUFACTURER"},
+
+
+	{"username":"Autobahn_Motors","displayname":"Autobahn Motors","password":"passw0rd","role":"DEALER"},
+	{"username":"Calstar_Motors","displayname":"Calstar Motors","password":"passw0rd","role":"DEALER"},
+	{"username":"AHAG_Dorsten","displayname":"AHAG Dorsten","password":"passw0rd","role":"DEALER"},
+	{"username":"Saltas_and_Sons_SA","displayname":"Saltas and Sons SA","password":"passw0rd","role":"DEALER"},
+	{"username":"Autohaus_Fuchs","displayname":"Autohaus Fuchs","password":"passw0rd","role":"DEALER"},
+	{"username":"Autohaus_Entenmann","displayname":"Autohaus Entenmann","password":"passw0rd","role":"DEALER"},
+	{"username":"Autohaus_Martin_KG","displayname":"Autohaus Martin KG","password":"passw0rd","role":"DEALER"},
+	{"username":"DEALER1","displayname":"DEALER 1","password":"passw0rd","role":"DEALER"},
+	
+	{"username":"Mercedes_Service_Center","displayname":"Mercedes Service Center","password":"passw0rd","role":"SERVICE_CENTER"},
+	{"username":"Mercedes_Benz_Niederlassung","displayname":"Mercedes-Benz Niederlassung","password":"passw0rd","role":"SERVICE_CENTER"},
+	{"username":"Autohaus_BMW","displayname":"Autohaus BMW","password":"passw0rd","role":"SERVICE_CENTER"},
+	{"username":"Autozentrum_BMW","displayname":"Autozentrum BMW","password":"passw0rd","role":"SERVICE_CENTER"},
+	{"username":"Autoallee_BMW","displayname":"Autoallee BMW","password":"passw0rd","role":"SERVICE_CENTER"},
+	{"username":"Prestige_Cars_BMW","displayname":"Prestige Cars BMW","password":"passw0rd","role":"SERVICE_CENTER"},
+	{"username":"SC1","displayname":"SC 1","password":"passw0rd","role":"SERVICE_CENTER"},
+
+	{"username":"CHRIS_VARGAS","displayname":"CHRIS VARGAS","password":"passw0rd","role":"CUSTOMER"},
+	{"username":"WILLIAM_LOVELL","displayname":"WILLIAM LOVELL","password":"passw0rd","role":"CUSTOMER"},
+	{"username":"GILBERT_SMITH","displayname":"GILBERT SMITH","password":"passw0rd","role":"CUSTOMER"},
+	{"username":"CHRISTINE_DUNNETT","displayname":"CHRISTINE DUNNETT","password":"passw0rd","role":"CUSTOMER"},
+	{"username":"YUKIO_MIFUNE","displayname":"YUKIO MIFUNE","password":"passw0rd","role":"CUSTOMER"}
+]

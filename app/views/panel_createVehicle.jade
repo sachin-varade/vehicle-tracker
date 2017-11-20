@@ -1,0 +1,57 @@
+#newVehiclePanel(hidden).panel
+	h1 Enter Vehicle Details
+	hr
+
+	#innerWrap
+		
+		form(action="/newVehicle" method="POST")#newPartform
+			table#createVehicleTable(style="width:65%;float:left;margin-top: -48px;margin-bottom:70px;")
+				tr
+					td
+						h5 VIN:
+					td
+						legend 
+							input(type="text" name="txtVin" placeholder="")			
+				tr
+					td
+						h5 Model:
+					td
+						legend 
+							//- input(type="text" name="Make" placeholder="Model")
+							select#allModels(name="allModels")
+				tr
+					td
+						h5 Variant:
+					td
+						legend 
+							select#allModelVariant(name="allModelVariant")							
+				tr
+					td
+						h5 Engine:
+					td
+						legend 
+							select#allEngines(name="allEngines")
+				tr
+					td
+						h5 Gear Box:
+					td
+						legend 
+							select#allGearBoxes(name="allGearBoxes")
+				tr
+					td
+						h5 Color:
+					td
+						legend 
+							select#allColors(name="allColors")
+				tr
+					td#createPartBut(colspan="2" style="font-size: 12px;")
+						legend
+							button(type="button" style="margin:10px 10px 5px 10px" )#createVehicle
+								span.fa.fa-plus &nbsp;&nbsp;
+								span SUBMIT
+				
+			
+			table(style="width:30%;float:left;margin-top:-48px; margin-left:10px")
+				tr(style="border-bottom:0px;")
+					td#carImage(style="width:100px;height:100px;border:0px solid #ccc;")					
+			

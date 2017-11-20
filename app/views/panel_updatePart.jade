@@ -1,0 +1,51 @@
+#updatePartPanel(hidden).panel
+	h1 Enter Part Details to Update
+	hr
+
+	#innerWrap
+		
+		form(action="/updatePart" method="POST")#updatePartform
+			table#updatePartTable(style="width:80%;float:center")
+				tr(style="display: block;")
+					td(style="width:60%")
+						h5 PartId To Update:
+					td
+						legend
+							input(type="text" name="PartIdToUpdate" placeholder="Part Id")
+				tr#deliveryDt
+					td(style="width:60%")
+						h5 Date Of Delivery:
+					td
+						legend 	
+							input(type="date" name="DateOfDelivery" placeholder="Date Of Delivery")
+				tr#vehicleId
+					td(style="width:60%")
+						h5 Vehicle Id:
+					td
+						legend 
+							input(type="text" name="VehicleId" placeholder="Vehicle Id")
+				tr#installationDt
+					td(style="width:60%")
+						h5 Date Of Installation:
+					td
+						legend 
+							input(type="date" name="DateOfInstallation" placeholder="Date Of Installation")
+				tr#warrantyStartDt
+					td(style="width:60%")
+						h5 Warranty Start Date:
+					td
+						legend 
+							input(type="date" name="WarrantyStartDate" placeholder="Warranty Start Date")
+				tr#warrantyEndDt
+					td(style="width:60%")
+						h5 Warranty End Date:
+					td
+						legend 
+							input(type="date" name="WarrantyEndDate" placeholder="Warranty End Date")
+				tr
+					td#updatePartBut(colspan="2" align="middle" style="font-size: 12px;")
+						legend
+							button(type="button" style="margin:10px 10px 5px 10px" )#update
+								span.fa.fa-plus &nbsp;&nbsp;
+								span UPDATE
+				

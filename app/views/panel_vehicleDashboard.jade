@@ -1,0 +1,54 @@
+#vehicleDashboardPanel(hidden).panel
+	h2(style="font-weight:bold;") Vehicle Tracker
+	hr
+
+	#dashboardModal.modalDialog(style="margin-top: 200px")
+			div
+				.modal-header
+					h5 Filter Vehicle
+					hr
+				.modal-content
+					form#dashboardFilter
+						input#dashboard_Vin.dashboard-filter(type="text" name="Vin" placeholder="Vin Number")
+						br
+						br
+						a.filter-button(href="#close" title="Close" ) Close
+						
+	div#contentTable					
+		div(style="text-align:center")
+			span#spinner2.fa.fa-circle-o-notch.fa-spin(style="font-size: 80px;color:#5596E6")					
+		#openTrades
+
+			
+
+			div#searchBar(style="display:block; margin-top:12px;width:20%;height:30px;font-size: 15px;text-align: left;font-weight: bold;color:#5596E6;border-bottom:0px #D4DCDC solid;")				
+				span(style="margin-left:5px;") Vin Number: 
+				input#scVin(type="text" name="scVin" placeholder="")
+
+
+
+			div#filterBar(style="display:none;margin-top:20px;width:20%;height:30px;font-size: 15px;text-align: left;font-weight: bold;color:#5596E6;border-bottom:1px #D4DCDC solid;") Vin Number &nbsp;&nbsp;
+				a.filter-button(href="#dashboardModal") Filter
+			table#dashboardTablevehicles.tablesorter(style="display:none;width:20%;float:left;margin-top:10px; margin-left:10px;")						
+				tbody#vehicledashboardBody				
+
+			table#batchDetailsTable.tablesorter(style="width:78%;margin-top: -35px; margin-bottom: 80px;float:right")
+				thead
+					tr 
+						th(colspan="2" style="font-size: 15px;height:15px;text-align: left;padding-left: 104px;font-weight: bold;")
+							div#bDetHeader(style="float:left;")
+							button(type="button" style="margin-left:20px;margin-top: -12px;" id="editVehicleDetails") View Vehicle Details
+				tbody#vehiclesbatchDetailsBody
+			table#vehicleDetailsTable.tablesorter(style="width:78%;margin-top: -35px;float:right;display:none;")
+				//- thead
+				//- 	tr 
+				//- 		th#vehicleDetHeader(colspan="2" style="font-size: 15px;text-align: left;height:23;padding-left: 104px;font-weight: bold;") Vehicle Details
+				tbody#vehicleDetailsBody
+					// -------------- Dashboard View
+					include ./panel_updateVehicle.jade
+			table#vehicleErrorMessage.tablesorter(style="width:78%;margin-top: -35px;float:right;display:none;")
+				thead
+					tr 
+						th(colspan="2" style="font-size: 15px;height:15px;text-align: left;font-weight: bold;")
+							div#divVehicleErrorMessage(style="float:left;")
+							

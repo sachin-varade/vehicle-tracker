@@ -1,0 +1,42 @@
+extends ./template/layout.jade
+	
+	
+// --------------- Header -------------- //
+block custom_header
+	script(src='/js/part2.js')
+	script(src='/js/blockchain.js')
+	script(type='text/javascript').
+		$(document).ready(function(){
+			
+		});
+		
+		
+// --------------- Navigation Bar  -------------- //
+block navpanel
+	include ./template/nav_part2.jade
+	
+	
+// --------------- Main Stuff  -------------- //
+block content
+	#contentPanel
+		h1 Login
+		hr
+
+		table(style="height:400px;vertical-align:middle;")
+			tr
+				td(style="width:40%")		
+					img#loginImage(src="imgs/login-icon.png" style="width:200px;height:200px;")
+				td
+					div(style="width 300px;margin-left:50px;")
+						form(method="POST" action="#" style="text-align: left;")
+							p.hint 
+								!{bag.session.error_msg}
+								br
+								br
+							p
+
+								input(type="text" placeholder="Login" name="username")
+							p
+
+								input(type="password" placeholder="Password" name="password")
+							button(type="submit" style="margin-top:10px")#loginButton Login

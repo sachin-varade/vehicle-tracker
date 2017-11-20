@@ -1,0 +1,180 @@
+tr#divServiceDue(style="display:none;")
+	td(colspan="2")
+		h5#msgServiceDue(style="color:red;")			
+
+tr
+	td(style="width:50%; border: 1px solid #5596E6; margin:5px; padding:10px")
+		div#vehicleDetailsDiv(style="width:100%;")
+			table#vehicleDetaileTable
+				tr
+					th#customerVehDetHeader(colspan="2" style="font-size: 18px;text-align: left;font-weight: bold;") Customer/Vehicle Details
+				tr
+					td
+						h5 VIN:
+					td
+						legend 
+							input(type="text" disabled name="upVin" placeholder="VIN Number")
+				tr
+					td(width="25%")
+						h5 Model:
+					td
+						legend 
+							input(type="text" disabled name="upMake" placeholder="Model")
+				tr
+					td
+						h5 Variant:
+					td
+						legend 
+							p#upVariant(class="read-only-span")					
+				tr
+					td
+						h5 Engine:
+					td
+						legend 
+							p#upEngine(class="read-only-span")
+				tr
+					td
+						h5 Gear Box:
+					td
+						legend 
+							p#upGearBox(class="read-only-span")
+				tr
+					td
+						h5 Color:
+					td
+						legend 
+							p#upColor(class="read-only-span")
+				tr
+					td
+						h5 Owner:
+					td
+						legend 			
+							select#allCustomers(name="allCustomers")
+				tr
+					td
+						h5 Dealer:
+					td
+						legend 			
+							input(type="text" disabled name="upDealer" placeholder="")
+				tr
+					td
+						h5 License Plate Number:
+					td
+						legend 
+							input(type="text" name="upLicensePlateNumber")
+
+	
+		td(style="width:50%; height:100%; vertical-align:top; border: 1px solid #5596E6; margin:5px; padding:10px;")
+			table(style="width:100%;float:left;margin-top:0px; margin-left:10px")
+				tr(style="border-bottom:0px;")
+					td#carImage(style="border:0px solid #ccc;")					
+						img#cimg(src="", alt="Car Model")
+
+			div#otherDetailsDiv(style="width:100%;")
+				table#otherDetailsTable
+					tr
+						th#otherDetHeader(colspan="2" style="font-size: 18px;text-align: left;font-weight: bold;") Other Details
+					tr
+						td
+							h5 Warranty Start Date:
+						td
+							legend 
+								input(type="date" name="upWarrantyStartDate" placeholder="Warranty Start Date")
+					tr
+						td
+							h5 Warranty End Date:
+						td
+							legend 
+								input(type="date" disabled name="upWarrantyEndDate" placeholder="Warranty End Date")
+					tr
+						td
+							h5 Date of Manufacture:
+						td
+							legend 
+								input(type="date" disabled name="upDateOfManufacture" placeholder="Date of Manufacture")
+					tr
+						td
+							h5 Date of Delivery:
+						td
+							legend 
+								input(type="date" name="upDateofDelivery" placeholder="Date of Delivery")
+
+	tr#trServiceDetails
+		td(colspan=2 style="width:100%; height:100%; vertical-align:top; border: 1px solid #5596E6; margin:5px; padding:10px;")
+			div#serviceDetailsDiv(style="width:100%;")
+				table
+					tr
+						th#serviceDetailsHeader(colspan="2" style="font-size: 18px;text-align: left;font-weight: bold;") Service Details
+
+					tr#partsPanelTR(style="display:none;")
+						td
+							h5 Service:
+						td
+							legend(style="display:none;")
+								select#selectedParts(style="float:left;text-align:left;")
+								//- div#upParts(style="float:left;text-align:left;margin-left:6px; padding:5px;border:solid 1px #ccc;float:left;")			
+							legend(style="display:block;width:100%;")
+								table
+									tr
+										td(style="width: 95px;") Service Done:
+										td(style="text-align:left;")
+											input#upServiceDone(type="checkbox" name="upServiceDone" style="margin-left: 7px;") 
+									tr
+										td(style="width: 95px;") Service Note:
+										td(style="text-align:left;")
+											textarea(id="upServiceDesc" style="margin-left: 7px;")
+									tr
+										td(style="width: 95px;") Part Type:
+										td(style="text-align:left;")
+											select#allPartTypes(name="allPartTypes")
+									tr
+										td(style="width: 95px;" valign="top") Parts:
+										td(style="text-align:left;")
+											input(type="text" name="upPartId" placeholder="Part Id")
+											button(type="button" style="margin:5px" )#btnAddPart
+												span Validate and Add
+											br
+											div#upPartsAddedBySC(style="width:100%;float:left;text-align:left;margin-left:-2px;padding:5px;border:solid 0px #ccc;float:left;")			
+											#dialog-confirm(title="Validate with Part's blockchain and Add Part")
+												#popup-part-header(class="popup-part-header")
+												#popup-part-details(class="popup-part-details")
+
+					tr#serviceHistoryPanelTR(style="display:none;")
+						td
+							h5 Service History:
+						td
+							legend 
+								div#upServiceHistory(style="height: 200px;overflow-y: scroll;width: 490px;border: 1px solid #ccc;")
+
+					tr
+						td
+							h5 Added Parts by Service Center:
+						td
+							legend()			
+								div#upParts(style="width:100%;text-align:left;color:#565454;") 
+					tr
+						td
+							h5 Last Service Date:
+						td
+							legend 
+								input(type="date" disabled name="upLastServiceDate" placeholder="Last Service Date")
+					tr
+						td
+							h5 Service Due Date:
+						td
+							legend 
+								input(type="date" disabled name="upServiceDue" placeholder="Service Due")					
+			legend 			
+				input(type="hidden" disabled name="upVehicleId" placeholder="upVehicleId")
+
+	tr#trUpdateVehicle
+						td#createPartBut(colspan="2" style="font-size:12px;")
+							center
+								legend
+									button(type="button" style="margin:10px 10px 5px 10px" )#updateVehicle
+										span.fa.fa-plus &nbsp;&nbsp;
+										span SUBMIT
+	tr(style="height:40px;")
+						td(colspan="2" style="font-size:12px;")
+							center
+								legend									

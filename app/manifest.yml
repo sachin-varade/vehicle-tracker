@@ -1,0 +1,10 @@
+---
+applications:
+- path: .  
+  instances: 2
+  domain:  eu-gb.mybluemix.net
+  name: vehicle-tracker
+  host: vehicle-tracker
+  disk_quota: 1024M
+  memory: 2G
+  command: node app.js

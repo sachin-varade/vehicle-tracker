@@ -1,0 +1,19 @@
+#vehicleDashboardPanel(hidden).panel
+	h2(style="font-weight:bold;") Search Part
+	hr
+
+	#dashboardModal.modalDialog(style="margin-top: 200px")
+	div#contentTable					
+		div(style="text-align:center")
+			span#spinner2.fa.fa-circle-o-notch.fa-spin(style="font-size: 80px;color:#5596E6")					
+		#openTrades
+			div#searchPartsField(style="display:block; margin-top:12px;width:20%;height:30px;font-size: 15px;text-align: left;font-weight: bold;color:#5596E6;border-bottom:0px #D4DCDC solid;")				
+				span(style="margin-left:5px;") Part Id: 
+				input#scPartId(type="text" name="scPartId" placeholder="")
+            
+			table#batchDetailsTable.tablesorter(style="margin-bottom: 100px;width:80%;float:right;margin-top:-17px;")
+				thead
+					tr 
+						th#bDetHeader(colspan="2" style="font-size: 12px;")
+				tbody#batchDetailsBody                
+				
